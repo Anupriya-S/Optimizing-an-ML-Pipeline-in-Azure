@@ -36,7 +36,7 @@ def clean_data(data):
 
     y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
     return x_df, y_df
-    
+
 
 def main():
     # Add arguments to script
@@ -56,11 +56,11 @@ def main():
     run.log("Accuracy", np.float(accuracy))
 
 if __name__ == '__main__':
-    
+
     # TODO: Create TabularDataset using TabularDatasetFactory
     # Data is located at:
     # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
-    ds = from_delimited_files(path = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv", set_column_types=None, separator=',', encoding='utf8')
+    ds = from_delimited_files(path = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv", separator=',', encoding='utf8')
 
     x, y = clean_data(ds)
 
