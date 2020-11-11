@@ -60,7 +60,7 @@ if __name__ == '__main__':
     # TODO: Create TabularDataset using TabularDatasetFactory
     # Data is located at:
     # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
-    ds = from_delimited_files(path = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv", separator=',', encoding='utf8')
+    ds = TabularDatasetFactory.from_delimited_files(path = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv", separator=',', encoding='utf8')
 
     x, y = clean_data(ds)
 
