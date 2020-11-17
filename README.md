@@ -35,13 +35,13 @@ The benefit of using *Random sampling* over any other method is that it picks up
 An early termination policy specifies that if you have a certain number of failures, HyperDrive will stop looking for the answer. The early stopping policy chosen here is the BanditPolicy. In this case, it basically states to check the job every two iterations. If the primary metric (Accuracy) falls outside of the top 10% range, Azure ML terminate the job. This saves us from continuing to explore hyperparameters that don't show promise helping reach our target metric.
 ![best_hyperdrive](https://github.com/Anupriya-S/Optimizing-an-ML-Pipeline-in-Azure/blob/main/Images/Screenshot%20(949).png?raw=true)
 
-After trying out various combinations of the hyperparameters, maximum Accuracy achieved by HyperDrive is 0.9089.
+**After trying out various combinations of the hyperparameters, maximum Accuracy achieved by HyperDrive is 0.9089.**
 
 ## AutoML
 Next we tried our hands on Automated Machine Learning or what we like to call it as *AutoML*. Basically, AutoML involves the application of DevOps principles to machine learning, in order to automate all aspects of the process (making it *MLOps*!). All the steps like feature engineering, hyperparameter selection, model training, and tuning, can be automated with the use of AutoML. With AutoML, we can get hundreds of models ready for deployment in much lesser time and even lesser efforts.
 ![AutoML Result](https://github.com/Anupriya-S/Optimizing-an-ML-Pipeline-in-Azure/blob/main/Images/Screenshot%20(952).png?raw=true)
 
-For this project, out of several models trained by AutoML (in a span of just 40 minutes) Voting Ensemble gave the highest value of accuracy, 0.9170.
+**For this project, out of several models trained by AutoML (in a span of just 40 minutes) Voting Ensemble gave the highest value of accuracy, 0.9170.**
 
 ## Pipeline comparison
 Its time to put these two models side by side. There is clearly a lot of difference between the two pipelines except that the end goal was to attain the maximum value of accuracy in both the cases.
